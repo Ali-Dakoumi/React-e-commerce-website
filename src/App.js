@@ -73,11 +73,11 @@ function App() {
       <NavBar total={cart.total_items} />
       <Routes>
         <Route
-          path="/"
+          path="/React-e-commerce-website"
           element={<Products addToCart={addToCart} products={products} />}
         />
         <Route
-          path="/cart"
+          path="/React-e-commerce-website/cart"
           element={
             <Cart
               updateCart={updateCart}
@@ -88,7 +88,7 @@ function App() {
           }
         />
         <Route
-          path="/checkout"
+          path="/React-e-commerce-website/checkout"
           element={
             <Checkout
               cart={cart}
