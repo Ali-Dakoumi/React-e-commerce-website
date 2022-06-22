@@ -7,7 +7,9 @@ import { BrowserRouter, history } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+    <BrowserRouter
+      basename={"https://ali-dakoumi.github.io/React-e-commerce-website/"}
+    >
       <App />
     </BrowserRouter>
   </React.StrictMode>
