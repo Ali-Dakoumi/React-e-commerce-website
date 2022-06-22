@@ -7,7 +7,7 @@ const NavBar = ({ total }) => {
     <header className=" w-full">
       <nav className="flex justify-between items-center h-12 border-b-2 border-gray-100 px-5 z-10 absolute w-full bg-white">
         <Link to={"/"}>Commerce.js</Link>
-        {location.pathname === "/" && (
+        {location.pathname === "React-e-commerce-website/" && (
           <div className="relative">
             <Link to={"/cart"}>
               <svg

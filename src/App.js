@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Products/NavBar/NavBar";
 import Products from "./Components/Products/Products";
 import { commerce } from "./Commerce/Commerce";
@@ -72,36 +72,33 @@ function App() {
     <div className="App w-full h-full ">
       <NavBar total={cart.total_items} />
       <Routes>
-        <HashRouter basename="/">
-          <Route
-            exact
-            path="/"
-            element={<Products addToCart={addToCart} products={products} />}
-          />
-          <Route
-            path="/cart"
-            element={
-              <Cart
-                updateCart={updateCart}
-                cart={cart}
-                removeFromCart={removeFromCart}
-                emptyCart={emptyCart}
-              />
-            }
-          />
-          <Route
-            path="/checkout"
-            element={
-              <Checkout
-                cart={cart}
-                onCaptureCheckout={handleCaptureCheckout}
-                error={errorMessage}
-                order={order}
-                refreshCart={refreshCart}
-              />
-            }
-          />
-        </HashRouter>
+        <Route
+          path="/React-e-commerce-website"
+          element={<Products addToCart={addToCart} products={products} />}
+        />
+        <Route
+          path="/React-e-commerce-website/cart"
+          element={
+            <Cart
+              updateCart={updateCart}
+              cart={cart}
+              removeFromCart={removeFromCart}
+              emptyCart={emptyCart}
+            />
+          }
+        />
+        <Route
+          path="/React-e-commerce-website/checkout"
+          element={
+            <Checkout
+              cart={cart}
+              onCaptureCheckout={handleCaptureCheckout}
+              error={errorMessage}
+              order={order}
+              refreshCart={refreshCart}
+            />
+          }
+        />
       </Routes>
     </div>
   );
