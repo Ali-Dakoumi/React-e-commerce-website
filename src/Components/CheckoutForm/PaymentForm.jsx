@@ -7,7 +7,6 @@ import {
 import { loadStripe } from "@stripe/stripe-js";
 
 import Review from "./Review";
-require("dotenv").config();
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
